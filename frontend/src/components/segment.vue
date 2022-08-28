@@ -26,7 +26,7 @@
 
 <script>
 export default {
-  name: 'v-segment',
+  name: 'segment',
   props: ['segment', 'path'],
   data() {
     return {

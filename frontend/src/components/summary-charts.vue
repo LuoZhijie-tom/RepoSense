@@ -140,7 +140,7 @@
       .summary-chart__ramp(
         v-on:click="openTabZoomSubrange(user, $event, isGroupMerged(getGroupName(repo)))"
       )
-        v-ramp(
+        ramp(
           v-bind:groupby="filterGroupSelection",
           v-bind:user="user",
           v-bind:tframe="filterTimeFrame",
@@ -178,12 +178,12 @@
 <script>
 import { mapState } from 'vuex';
 
-import vRamp from './v-ramp.vue';
+import ramp from './ramp.vue';
 
 export default {
-  name: 'v-summary-charts',
+  name: 'summary-charts',
   components: {
-    vRamp,
+    ramp,
   },
   props: ['checkedFileTypes', 'filtered', 'avgContributionSize', 'filterBreakdown',
       'filterGroupSelection', 'filterTimeFrame', 'filterSinceDate', 'filterUntilDate', 'isMergeGroup',

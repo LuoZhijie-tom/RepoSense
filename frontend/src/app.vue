@@ -10,10 +10,10 @@
       h3 {{ loadingOverlayMessage }}
 
   template(v-if="userUpdated")
-    v-resizer
+    resizer
       template(v-slot:left)
         #summary-wrapper
-          v-summary.tab-padding(
+          summary.tab-padding(
             ref="summary",
             v-bind:repos="users",
             v-bind:error-messages="errorMessages"
@@ -42,8 +42,8 @@
         #tabs-wrapper(ref="tabWrapper")
           .tab-content.panel-padding
             .tab-pane
-              v-authorship#tab-authorship(v-if="tabType === 'authorship'")
-              v-zoom#tab-zoom(v-else-if="tabType === 'zoom'")
+              authorship#tab-authorship(v-if="tabType === 'authorship'")
+              zoom#tab-zoom(v-else-if="tabType === 'zoom'")
               #tab-empty(v-else)
                 .title
                   h2 Welcome to this RepoSense report!
@@ -80,10 +80,10 @@ import JSZip from 'jszip';
 import LoadingOverlay from 'vue-loading-overlay';
 import { mapState } from 'vuex';
 
-import vResizer from './components/v-resizer.vue';
-import vZoom from './views/v-zoom.vue';
-import vSummary from './views/v-summary.vue';
-import vAuthorship from './views/v-authorship.vue';
+import resizer from './components/resizer.vue';
+import zoom from './views/zoom.vue';
+import summary from './views/summary.vue';
+import authorship from './views/authorship.vue';
 
 const loadingResourcesMessage = 'Loading resources...';
 
@@ -304,10 +304,10 @@ const app = {
 
   components: {
     LoadingOverlay,
-    vResizer,
-    vZoom,
-    vSummary,
-    vAuthorship,
+    resizer,
+    zoom,
+    summary,
+    authorship,
   },
   created() {
     window.decodeHash();

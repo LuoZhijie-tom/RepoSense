@@ -43,7 +43,7 @@
               font-awesome-icon(icon="tags")
               span &nbsp;{{ tag }}
 
-  v-ramp(
+  ramp(
     v-bind:groupby="info.zFilterGroup",
     v-bind:user="filteredUser",
     v-bind:tframe="info.zTimeFrame",
@@ -134,7 +134,7 @@
 <script>
 import { mapState } from 'vuex';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-import vRamp from '../components/v-ramp.vue';
+import ramp from '../components/ramp.vue';
 
 const getFontColor = window.getFontColor;
 
@@ -150,10 +150,10 @@ function zoomInitialState() {
 }
 
 export default {
-  name: 'v-zoom',
+  name: 'zoom',
   components: {
     FontAwesomeIcon,
-    vRamp,
+    ramp,
   },
   data() {
     return {

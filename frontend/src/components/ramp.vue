@@ -34,7 +34,7 @@
 
 <script>
 export default {
-  name: 'v-ramp',
+  name: 'ramp',
   props: ['groupby', 'user', 'tframe', 'avgsize', 'sdate', 'udate', 'mergegroup', 'fromramp', 'filtersearch'],
   data() {
     return {

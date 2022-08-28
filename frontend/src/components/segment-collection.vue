@@ -1,16 +1,16 @@
 <template lang="pug">
 .segment-collection(v-observe-visibility="{ callback: visibilityChanged }")
   template(v-if="isRendered", v-for="segment in segments")
-    v-segment(v-bind:segment="segment", v-bind:path="path")
+    segment(v-bind:segment="segment", v-bind:path="path")
 </template>
 
 <script>
-import vSegment from './v-segment.vue';
+import segment from './segment.vue';
 
 export default {
-  name: 'v-segment-collection',
+  name: 'segment-collection',
   components: {
-    vSegment,
+    segment,
   },
   props: ['segments', 'path'],
   data() {
